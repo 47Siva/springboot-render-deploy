@@ -11,4 +11,4 @@ COPY authapp.jar app.jar
 #EXPOSE 8081
 
 #Used to run the project in docker
-ENTRYPOINT [ "java","-jar","authapp.jar" ]
+CMD ["java", "-jar", "app.jar", "--server.port=${PORT}"]
